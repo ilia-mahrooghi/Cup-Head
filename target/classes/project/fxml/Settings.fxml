@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<BorderPane fx:id="content" prefHeight="1000.0" prefWidth="1980.0" stylesheets="@../css/Settings.css"
+            xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="project.view.SettingsMenu">
+    <center>
+        <Pane>
+            <Button layoutX="1835.0" layoutY="855.0" onMouseClicked="#muteUnmute">
+                <graphic>
+                    <ImageView fx:id="muteUnmuteImage" fitHeight="36.0" fitWidth="33.0" layoutX="1919.0" layoutY="803.0"
+                               pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../png/sound/unmute.png"/>
+                        <cursor>
+                            <Cursor fx:constant="HAND"/>
+                        </cursor>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="easyLevel" layoutX="822.0" layoutY="374.0" mnemonicParsing="false"
+                    onMouseClicked="#easyLevel" prefHeight="48.0" prefWidth="116.0" text="Easy">
+                <font>
+                    <Font size="22.0"/>
+                </font>
+            </Button>
+            <Button fx:id="mediumLevel" layoutX="824.0" layoutY="437.0" mnemonicParsing="false"
+                    onMouseClicked="#MediumLevel" text="Medium">
+                <font>
+                    <Font size="22.0"/>
+                </font>
+            </Button>
+            <Button fx:id="hardLevel" layoutX="827.0" layoutY="498.0" mnemonicParsing="false"
+                    onMouseClicked="#hardLevel" prefHeight="48.0" prefWidth="111.0" text="Hard">
+                <font>
+                    <Font size="22.0"/>
+                </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="816.0" layoutY="68.0" prefHeight="114.0" prefWidth="325.0"
+                   text="Settings">
+                <font>
+                    <Font name="High Tower Text" size="64.0"/>
+                </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="828.0" layoutY="301.0" prefHeight="55.0" prefWidth="110.0" text="Level">
+                <font>
+                    <Font size="38.0"/>
+                </font>
+            </Label>
+            <Button fx:id="devilMode" layoutX="1003.0" layoutY="423.0" mnemonicParsing="false"
+                    onMouseClicked="#devilMode" prefHeight="77.0" prefWidth="198.0" text="Devil Mode">
+                <font>
+                    <Font size="27.0"/>
+                </font>
+            </Button>
+            <Button layoutX="1052.0" layoutY="582.0" mnemonicParsing="false" onMouseClicked="#changeGameSound"
+                    prefHeight="44.0" prefWidth="24.0">
+                <graphic>
+                    <ImageView fx:id="gameSound" fitHeight="36.0" fitWidth="33.0" layoutX="1919.0" layoutY="803.0"
+                               pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../png/sound/unmute.png"/>
+                        <cursor>
+                            <Cursor fx:constant="HAND"/>
+                        </cursor>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Label layoutX="869.0" layoutY="582.0" text="Game Sound">
+                <font>
+                    <Font size="30.0"/>
+                </font>
+            </Label>
+            <Button layoutX="897.0" layoutY="730.0" mnemonicParsing="false" onMouseClicked="#startGame"
+                    prefHeight="45.0" prefWidth="162.0" text="Start Game">
+                <font>
+                    <Font name="High Tower Text" size="20.0"/>
+                </font>
+            </Button>
+            <Button fx:id="blackAndWhite" onMouseClicked="#blackAndWhite" layoutX="901.0" layoutY="656.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="153.0"
+                    text="black/white">
+                <font>
+                    <Font name="High Tower Text" size="20.0"/>
+                </font>
+            </Button>
+        </Pane>
+    </center>
+
+</BorderPane>

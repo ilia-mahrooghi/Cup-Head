@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="content" stylesheets="@../css/loginMenu.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.view.LoginMenu">
+    <center>
+        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1980.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" layoutX="620.0" layoutY="198.0" prefHeight="605.0" prefWidth="741.0">
+                    <children>
+                        <HBox prefHeight="436.0" prefWidth="742.0" spacing="5">
+                            <children>
+                                <!--register-->
+                                <VBox prefHeight="436.0" prefWidth="367.0" spacing="3" style="-fx-background-color: #5eff00" styleClass="vbox">
+                                    <children>
+                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="61.0" prefWidth="362.0" text="register">
+                                            <font>
+                                                <Font name="High Tower Text" size="32.0" />
+                                            </font>
+                                        </Label>
+                                        <HBox prefHeight="85.0" prefWidth="362.0" spacing="6">
+                                            <children>
+                                                <VBox prefHeight="86.0" prefWidth="360.0">
+                                                    <children>
+                                                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="180.0" text="username">
+                                                            <font>
+                                                                <Font name="High Tower Text" size="36.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TextField id="username" fx:id="registerUsername" alignment="CENTER" onKeyReleased="#registerUsername" prefHeight="62.0" prefWidth="180.0" promptText="enter your username">
+                                                            <font>
+                                                                <Font name="Century" size="14.0" />
+                                                            </font>
+                                                        </TextField>
+                                                    </children>
+                                                </VBox>
+                                                <VBox prefHeight="100.0" prefWidth="356.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="176.0" text="nickname">
+                                                            <font>
+                                                                <Font name="High Tower Text" size="36.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TextField id="nickname" fx:id="registerNickname" alignment="CENTER" onKeyReleased="#registerNickname" prefHeight="42.0" prefWidth="186.0" promptText="enter your nickname">
+                                                            <font>
+                                                                <Font name="Century" size="14.0" />
+                                                            </font>
+                                                        </TextField>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                        <AnchorPane prefHeight="272.0" prefWidth="364.0">
+                                            <children>
+                                                <VBox layoutX="88.0" layoutY="4.0" prefHeight="200.0" prefWidth="185.0">
+                                                    <children>
+                                                        <Label alignment="TOP_CENTER" prefHeight="52.0" prefWidth="428.0" text="password" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+                                                            <font>
+                                                                <Font name="High Tower Text" size="36.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <PasswordField fx:id="registerPassword" alignment="CENTER" onKeyReleased="#registerPassword" prefHeight="44.0" prefWidth="186.0" promptText="enter your password">
+                                                            <font>
+                                                                <Font name="Century" size="14.0" />
+                                                            </font>
+                                                        </PasswordField>
+                                                        <Label alignment="CENTER" prefHeight="60.0" prefWidth="186.0" text="confirm password" textAlignment="CENTER">
+                                                            <font>
+                                                                <Font name="High Tower Text" size="24.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <PasswordField fx:id="confirmPassword" alignment="CENTER" onKeyReleased="#confirmPassword" prefHeight="42.0" prefWidth="186.0" promptText="confirm password">
+                                                            <font>
+                                                                <Font name="Century" size="14.0" />
+                                                            </font>
+                                                        </PasswordField>
+                                                    </children>
+                                                </VBox>
+                                                <Button fx:id="registerButton" disable="true" layoutX="133.0" layoutY="224.0" mnemonicParsing="false" onMouseClicked="#register" prefHeight="26.0" prefWidth="97.0" text="register" />
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                    <padding>
+                                        <Insets left="5.0" right="5.0" />
+                                    </padding>
+                                </VBox>
+
+                                <!--login-->
+                                <VBox prefHeight="436.0" prefWidth="380.0" style="-fx-background-color: #fcef02" styleClass="vbox">
+                                    <children>
+                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="61.0" prefWidth="362.0" text="login">
+                                            <font>
+                                                <Font name="High Tower Text" size="32.0" />
+                                            </font>
+                                        </Label>
+                                        <AnchorPane prefHeight="363.0" prefWidth="346.0">
+                                            <children>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="52.0" prefHeight="18.0" prefWidth="174.0" text="username">
+                                                    <font>
+                                                        <Font name="High Tower Text" size="36.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="loginUsername" alignment="CENTER" layoutX="77.0" layoutY="104.0" prefHeight="42.0" prefWidth="199.0" promptText="username">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </TextField>
+
+                                                <Label alignment="CENTER" layoutX="80.0" layoutY="158.0" prefHeight="46.0" prefWidth="186.0" text="password">
+                                                    <font>
+                                                        <Font name="High Tower Text" size="36.0" />
+                                                    </font>
+                                                </Label>
+                                                <PasswordField fx:id="loginPassword" alignment="CENTER" layoutX="80.0" layoutY="215.0" prefHeight="43.0" prefWidth="186.0" promptText="password">
+                                                    <font>
+                                                        <Font name="Century" size="14.0" />
+                                                    </font>
+                                                </PasswordField>
+
+                                                <Button fx:id="loginButton" layoutX="128.0" layoutY="268.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="26.0" prefWidth="97.0" text="login" />
+                                                <Button fx:id="loginAsAGuest" layoutX="105.0" layoutY="314.0" mnemonicParsing="false" onMouseClicked="#loginAsAGuest" prefHeight="34.0" prefWidth="154.0" text="login as a guest" />
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                    <padding>
+                                        <Insets left="5.0" right="5.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <Label alignment="CENTER" layoutX="782.0" layoutY="93.0" prefHeight="42.0" prefWidth="416.0" text="login menu" textAlignment="CENTER">
+                    <font>
+                        <Font name="High Tower Text" size="50.0" />
+                    </font>
+                </Label>
+                <Button layoutX="1835.0" layoutY="855.0" onMouseClicked="#muteUnmute">
+                    <graphic>
+                        <ImageView fx:id="muteUnmuteImage" fitHeight="36.0" fitWidth="33.0" layoutX="1919.0" layoutY="803.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../png/sound/unmute.png" />
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </Pane>
+    </center>
+</BorderPane>

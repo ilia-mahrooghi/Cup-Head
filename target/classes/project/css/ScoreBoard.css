@@ -1,0 +1,31 @@
+.root {
+    -fx-background-size: contain, contain, contain, contain, contain, contain;
+    -fx-background-position: bottom, bottom, bottom, bottom, bottom, bottom;
+    -fx-background-repeat: repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, repeat-x;
+    -fx-background-image: url("../png/background/background0.png"),
+    url("../png/background/background1.png"),
+    url("../png/background/background2.png"),
+    url("../png/background/background3.png"),
+    url("../png/background/background4.png"),
+    url("../png/background/background5.png");
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane {
+    -fx-background-color: rgba(227, 252, 2, 0.85);
+    -fx-border-radius: 30 30 30 30;
+    -fx-background-radius: 30 30 30 30;
+    -fx-border-color: #030143;
+}
+
+Button {
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+    -fx-background-color: #d057ec;
+    -fx-border-color: #ff00ea;
+    -fx-effect: dropshadow(gaussian, rgba(21, 21, 21, 0.7), 10, 0, 0, 1);
+    -fx-cursor: hand;
+}

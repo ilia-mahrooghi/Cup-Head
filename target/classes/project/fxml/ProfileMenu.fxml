@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane fx:id="content" prefHeight="1000.0" prefWidth="1980.0" stylesheets="@../css/ProfileMenu.css"
+            xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="project.view.ProfileMenu">
+    <center>
+        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox layoutX="84.0" layoutY="123.0" prefHeight="673.0" prefWidth="1084.0"
+                      style="-fx-background-color: rgba(111,111,111,0.75)" styleClass="mainVbox">
+                    <children>
+                        <Pane prefHeight="672.0" prefWidth="1085.0">
+                            <children>
+                                <Label alignment="CENTER" layoutX="141.0" layoutY="63.0" prefHeight="73.0"
+                                       prefWidth="264.0" text="username">
+                                    <font>
+                                        <Font name="High Tower Text" size="44.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="username" alignment="CENTER" layoutX="161.0" layoutY="136.0"
+                                           onKeyReleased="#username" prefHeight="41.0" prefWidth="224.0">
+                                    <font>
+                                        <Font name="Century" size="24.0"/>
+                                    </font>
+                                </TextField>
+                                <Label layoutX="623.0" layoutY="73.0" text="nickname">
+                                    <font>
+                                        <Font name="High Tower Text" size="44.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="nickname" alignment="CENTER" layoutX="601.0" layoutY="136.0"
+                                           onKeyReleased="#nickname" prefHeight="41.0" prefWidth="224.0">
+                                    <font>
+                                        <Font name="Century" size="24.0"/>
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="TEXT"/>
+                                    </cursor>
+                                </TextField>
+                                <PasswordField fx:id="password" alignment="CENTER" layoutX="401.0" layoutY="315.0"
+                                               onKeyReleased="#password" prefHeight="43.0" prefWidth="208.0">
+                                    <cursor>
+                                        <Cursor fx:constant="TEXT"/>
+                                    </cursor>
+                                </PasswordField>
+                                <Label layoutX="421.0" layoutY="244.0" text="password">
+                                    <font>
+                                        <Font name="High Tower Text" size="43.0"/>
+                                    </font>
+                                </Label>
+                                <Label fx:id="confirmPasswordLabel" alignment="CENTER" layoutX="392.0" layoutY="395.0"
+                                       prefHeight="50.0" prefWidth="226.0" text="confirm password">
+                                    <font>
+                                        <Font name="High Tower Text" size="22.0"/>
+                                    </font>
+                                </Label>
+                                <PasswordField fx:id="confirmPassword" alignment="CENTER" layoutX="396.0"
+                                               layoutY="445.0" onKeyReleased="#confirmPassword" prefHeight="40.0"
+                                               prefWidth="218.0">
+                                    <cursor>
+                                        <Cursor fx:constant="TEXT"/>
+                                    </cursor>
+                                </PasswordField>
+                                <Button fx:id="submit" layoutX="461.0" layoutY="579.0" mnemonicParsing="false"
+                                        onMouseClicked="#submit" prefHeight="26.0" prefWidth="89.0" text="submit"/>
+                            </children>
+                        </Pane>
+                    </children>
+                </VBox>
+                <Button layoutX="914.0" layoutY="827.0" mnemonicParsing="false" onMouseClicked="#exit" prefHeight="27.0"
+                        prefWidth="177.0" text="exit">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Button>
+                <VBox layoutX="1267.0" layoutY="135.0" prefHeight="433.0" prefWidth="561.0"
+                      style="-fx-background-color: rgba(34,83,42, 0.7)" styleClass="mainVbox">
+                    <children>
+                        <Pane prefHeight="475.0" prefWidth="560.0">
+                            <children>
+                                <ImageView fx:id="profilePicture" fitHeight="249.0" fitWidth="257.0" layoutX="152.0"
+                                           layoutY="92.0" pickOnBounds="true" preserveRatio="true"/>
+                                <Label alignment="CENTER" layoutX="217.0" layoutY="22.0" prefHeight="44.0"
+                                       prefWidth="127.0" text="avatar">
+                                    <font>
+                                        <Font name="High Tower Text" size="37.0"/>
+                                    </font>
+                                </Label>
+                                <Button layoutX="455.0" layoutY="363.0" mnemonicParsing="false"
+                                        onMouseClicked="#chooseFileProfilePicture" prefHeight="27.0" prefWidth="64.0"
+                                        text="file"/>
+                                <Button layoutX="343.0" layoutY="364.0" mnemonicParsing="false"
+                                        onMouseClicked="#chooseFromAvatars" prefHeight="27.0" prefWidth="89.0"
+                                        text="pictures"/>
+                            </children>
+                        </Pane>
+                    </children>
+                </VBox>
+                <VBox fx:id="imageVBox" layoutX="678.0" layoutY="239.0" prefHeight="442.0" prefWidth="625.0"
+                      styleClass="imageVBox">
+                    <children>
+                        <Pane prefHeight="442.0" prefWidth="624.0">
+                            <children>
+                                <Button fx:id="exitImageVBox" layoutX="597.0" layoutY="1.0" mnemonicParsing="false"
+                                        onMouseClicked="#exitImageVBox" prefHeight="27.0" prefWidth="26.0"
+                                        styleClass="XPattern" text="X"/>
+                                <VBox fx:id="imageBox1" layoutX="62.0" layoutY="38.0" prefHeight="168.0"
+                                      prefWidth="213.0">
+                                    <children>
+                                        <ImageView fx:id="avatar1" fitHeight="180.0" fitWidth="249.0"
+                                                   nodeOrientation="INHERIT" onMouseClicked="#selectImage"
+                                                   pickOnBounds="true" preserveRatio="true">
+                                            <cursor>
+                                                <Cursor fx:constant="HAND"/>
+                                            </cursor>
+                                        </ImageView>
+                                    </children>
+                                </VBox>
+                                <VBox fx:id="imageBox2" layoutX="348.0" layoutY="36.0" prefHeight="168.0"
+                                      prefWidth="213.0">
+                                    <children>
+                                        <ImageView fx:id="avatar2" fitHeight="183.0" fitWidth="238.0"
+                                                   onMouseClicked="#selectImage" pickOnBounds="true"
+                                                   preserveRatio="true">
+                                            <cursor>
+                                                <Cursor fx:constant="HAND"/>
+                                            </cursor>
+                                        </ImageView>
+                                    </children>
+                                </VBox>
+                                <VBox fx:id="imageBox3" layoutX="62.0" layoutY="232.0" prefHeight="168.0"
+                                      prefWidth="213.0">
+                                    <children>
+                                        <ImageView fx:id="avatar3" fitHeight="183.0" fitWidth="249.0"
+                                                   onMouseClicked="#selectImage" pickOnBounds="true"
+                                                   preserveRatio="true">
+                                            <cursor>
+                                                <Cursor fx:constant="HAND"/>
+                                            </cursor>
+                                        </ImageView>
+                                    </children>
+                                </VBox>
+                                <VBox fx:id="imageBox4" layoutX="342.0" layoutY="232.0" prefHeight="169.0"
+                                      prefWidth="213.0">
+                                    <children>
+                                        <ImageView fx:id="avatar4" fitHeight="183.0" fitWidth="249.0"
+                                                   onMouseClicked="#selectImage" pickOnBounds="true"
+                                                   preserveRatio="true">
+                                            <cursor>
+                                                <Cursor fx:constant="HAND"/>
+                                            </cursor>
+                                        </ImageView>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </Pane>
+                    </children>
+                    <cursor>
+                        <Cursor fx:constant="DEFAULT"/>
+                    </cursor>
+                </VBox>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="812.0" layoutY="21.0" prefHeight="72.0"
+                       prefWidth="356.0" text="Profile Menu">
+                    <font>
+                        <Font name="High Tower Text" size="44.0"/>
+                    </font>
+                </Label>
+                <Button layoutX="1835.0" layoutY="855.0" onMouseClicked="#muteUnmute">
+                    <graphic>
+                        <ImageView fx:id="muteUnmuteImage" fitHeight="36.0" fitWidth="33.0" layoutX="1919.0"
+                                   layoutY="803.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../png/sound/unmute.png"/>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button onMouseClicked="#removeAccount" alignment="CENTER" layoutX="266.0" layoutY="822.0" mnemonicParsing="false" prefHeight="56.0"
+                        prefWidth="239.0" text="remove account">
+                    <font>
+                        <Font name="High Tower Text" size="29.0"/>
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+    </center>
+</BorderPane>

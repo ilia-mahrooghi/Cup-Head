@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="content" prefHeight="1000.0" prefWidth="1980.0" stylesheets="@../css/MainMenu.css"
+            xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="project.view.MainMenu">
+    <center>
+        <Pane>
+            <children>
+                <VBox alignment="CENTER" layoutX="736.0" layoutY="158.0" prefHeight="604.0" prefWidth="509.0"
+                      spacing="20" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button onMouseClicked="#startGame" mnemonicParsing="false" prefHeight="70.0" prefWidth="310.0" text="play game">
+                            <font>
+                                <Font name="High Tower Text" size="36.0"/>
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#scoreBoard" prefHeight="70.0" prefWidth="310.0"
+                                text="Score Board">
+                            <font>
+                                <Font name="High Tower Text" size="36.0"/>
+                            </font>
+                        </Button>
+                        <Button fx:id="profileMenu" mnemonicParsing="false" onMouseClicked="#profileMenu"
+                                prefHeight="43.0" prefWidth="308.0" text="profile menu">
+                            <font>
+                                <Font name="High Tower Text" size="36.0"/>
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#logout" text="logout">
+                            <font>
+                                <Font name="High Tower Text" size="17.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <Button layoutX="1835.0" layoutY="855.0" onMouseClicked="#muteUnmute">
+                    <graphic>
+                        <ImageView fx:id="muteUnmuteImage" fitHeight="36.0" fitWidth="33.0" layoutX="1919.0"
+                                   layoutY="803.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../png/sound/unmute.png"/>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </Pane>
+    </center>
+</BorderPane>

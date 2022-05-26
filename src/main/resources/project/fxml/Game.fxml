@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane fx:id="content" prefHeight="1000.0" prefWidth="1900.0" stylesheets="@../css/Game.css"
+            xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="project.view.Game.GameMenu">
+
+    <bottom>
+        <Pane fx:id="bottomBar" prefHeight="63.0" prefWidth="1900.0">
+            <children>
+                <Label fx:id="clock" alignment="CENTER" layoutX="871.0" layoutY="-2.0" prefHeight="59.0"
+                       prefWidth="106.0" text="00:00">
+                    <font>
+                        <Font name="High Tower Text" size="36.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="airplaneHp" layoutX="72.0" layoutY="12.0" text="HP: 5">
+                    <font>
+                        <Font name="Century" size="26.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="enemyHealthLabel" layoutX="1500.0" layoutY="14.0" text="Boss HP: 1500">
+                    <font>
+                        <Font name="Century" size="21.0"/>
+                    </font>
+                </Label>
+                <ProgressBar fx:id="enemyProgramsBar" layoutX="1694.0" layoutY="12.0" prefHeight="33.0" prefWidth="85.0"
+                             progress="1.0">
+                </ProgressBar>
+                <ImageView fx:id="airplaneShotMode" fitHeight="40.0" fitWidth="45.0" layoutX="194.0" layoutY="12.0"
+                           pickOnBounds="true" preserveRatio="true"/>
+                <Label fx:id="score" layoutX="291.0" layoutY="6.0" text="Score: 0">
+                    <font>
+                        <Font name="High Tower Text" size="36.0"/>
+                    </font>
+                </Label>
+                <ProgressBar fx:id="rocketTimeLeft" layoutX="1196.0" layoutY="15.0" prefHeight="33.0" prefWidth="119.0" progress="0.0"/>
+                <Label layoutX="1047.0" layoutY="15.0" text="rocket time:">
+                    <font>
+                        <Font name="High Tower Text" size="21.0"/>
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+    </bottom>
+    <center>
+        <Pane fx:id="endGamePane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox fx:id="endGameVBox" layoutX="527.0" layoutY="132.0" prefHeight="672.0" prefWidth="846.0"
+                      styleClass="mainVbox">
+                    <children>
+                        <Pane prefHeight="686.0" prefWidth="845.0">
+                            <children>
+                                <Label fx:id="victoryOrLoose" alignment="CENTER" layoutX="240.0" layoutY="14.0"
+                                       prefHeight="105.0" prefWidth="364.0" text="victory">
+                                    <font>
+                                        <Font name="High Tower Text" size="64.0"/>
+                                    </font>
+                                </Label>
+                                <Button layoutX="348.0" layoutY="336.0" mnemonicParsing="false"
+                                        onMouseClicked="#restart" prefHeight="63.0" prefWidth="148.0" text="Restart">
+                                    <font>
+                                        <Font name="High Tower Text" size="30.0"/>
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                </Button>
+                                <Button layoutX="299.0" layoutY="420.0" mnemonicParsing="false"
+                                        onMouseClicked="#mainMenu" prefHeight="70.0" prefWidth="245.0" text="Main Menu">
+                                    <font>
+                                        <Font name="High Tower Text" size="36.0"/>
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                </Button>
+                                <Label fx:id="endScore" alignment="CENTER" layoutX="358.0" layoutY="157.0"
+                                       text="Score : 0">
+                                    <font>
+                                        <Font name="High Tower Text" size="36.0"/>
+                                    </font>
+                                </Label>
+                                <Label fx:id="endTime" alignment="CENTER" layoutX="311.0" layoutY="231.0"
+                                       prefHeight="44.0" prefWidth="222.0" text="Time: 0">
+                                    <font>
+                                        <Font name="High Tower Text" size="36.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                    </children>
+                </VBox>
+            </children>
+        </Pane>
+    </center>
+</BorderPane>
